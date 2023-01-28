@@ -1,2 +1,0 @@
-# ITGirlSchool
-React homework
