@@ -1,0 +1,38 @@
+body {
+  background-color: #cce9edbd;
+}
+
+.title {
+  font: bold 18pt 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  width: 600px;
+  height: 900px;
+  background-color: rgba(187, 207, 248, 0.63);
+  border: 1px solid red;
+}
+
+.card__img {
+  width: 450px;
+}
+
+.card__title {
+  font: bold 17pt 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.card__subtitle,
+.card__text {
+  font: bold 15pt 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.card__text {
+  font: 12pt 'Courier New', Courier, monospace;
+}
