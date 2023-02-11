@@ -1,0 +1,27 @@
+[
+    {
+        "rateName": "Безлимитный 300",
+        "rate": "300",
+        "condition": "10",
+        "color": "blue"
+    },
+    {
+        "rateName": "Безлимитный 450",
+        "rate": "450",
+        "condition": "50",
+        "color": "green"
+    },
+    {
+        "rateName": "Безлимитный 550",
+        "rate": "550",
+        "condition": "100",
+        "color": "red",
+        "selected": "selected"
+    },
+    {
+        "rateName": "Безлимитный 1000",
+        "rate": "1000",
+        "condition": "200",
+        "color": "black"
+    }
+]

@@ -1,0 +1,4 @@
+.App {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 25%);
+}
