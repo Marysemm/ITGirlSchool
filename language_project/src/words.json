@@ -5,7 +5,8 @@
         "transcription": "[ ˈfɑː.ðə r] ",
         "russian": "отец",
         "tags": "семья",
-        "tags_json": "[\"u0441u0435u043cu044cu044f\"]"
+        "tags_json": "[\"u0441u0435u043cu044cu044f\"]",
+        "isSelected": "true"
     },
     {
         "id": "13148",
@@ -194,7 +195,7 @@
     {
         "id": "13334",
         "english": "stop",
-        "transcription": "stv:p",
+        "transcription": "[stv:p]",
         "russian": "остановка",
         "tags": "",
         "tags_json": "[\"\"]"

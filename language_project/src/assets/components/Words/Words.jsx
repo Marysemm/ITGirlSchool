@@ -35,4 +35,6 @@ function Words(props) {
     )
 }
 
+
+
 export default CSSModules(Words, style);

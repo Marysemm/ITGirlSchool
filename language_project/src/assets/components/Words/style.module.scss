@@ -37,10 +37,22 @@
     .button__edit {
         @include btn;
         background-color: #7dee97cb;
+
+        &:hover {
+            background-color: #37c959cb;
+        }
     }
 
     .button__delete {
         @include btn;
         background-color: #dc64d8c7;
+
+        &:hover {
+            background-color: #c42ebfc7;
+        }
     }
+}
+
+.selected {
+    background-color: #bebdbd;
 }
