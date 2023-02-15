@@ -1,0 +1,8 @@
+@import '../../styles/options.scss';
+
+.word__card {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 20%);
+    gap: 30px;
+}

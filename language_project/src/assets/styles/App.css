@@ -1,6 +1,5 @@
-.cards__wrapper {
-    padding: 50px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0 100%), url(../img/background_img.jpg);
-    background-repeat: no-repeat;
+.App {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.795) 0 100%), url(../img/background_img.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }

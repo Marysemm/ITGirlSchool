@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-$mainFont: bold 15px 'Montserrat', sans-serif;
-$logoFont: bold 35px 'Montserrat', sans-serif;
-$textColor: #1f1f1f;
+@import '../../styles/options.scss';
 
 * {
     margin: 0;
