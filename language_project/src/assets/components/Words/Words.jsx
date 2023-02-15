@@ -1,14 +1,15 @@
 import React from "react";
-import './words.scss';
+import CSSModules from 'react-css-modules';
+import style from "./style.module.scss";
 
 function Words(props) {
     return (
-        <div className="word__cards">
-            <div className="englishWord">{props.english}</div>
-            <div className="englishTranscription">{props.transcription}</div>
-            <div className="englishTranslation">{props.russian}</div>
+        <div styleName="word__cards">
+            <div styleName="englishWord">{props.english}</div>
+            <div styleName="englishTranscription">{props.transcription}</div>
+            <div styleName="englishTranslation">{props.russian}</div>
         </div>
     )
 }
 
-export default Words;
+export default CSSModules(Words, style);

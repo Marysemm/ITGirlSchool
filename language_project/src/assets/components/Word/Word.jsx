@@ -1,10 +1,11 @@
 import React from "react";
-import './word.scss';
+import CSSModules from 'react-css-modules';
+import style from "./style.module.scss";
 
 function Word() {
-    <div className="wordCard">
+    <div styleName="wordCard">
 
     </div>
 }
 
-export default Word;
+export default CSSModules(Word, style);

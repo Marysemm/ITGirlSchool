@@ -1,13 +1,14 @@
 import React from "react";
-import './header.scss';
+import CSSModules from 'react-css-modules';
+import style from "./style.module.scss";
 
 function Header() {
     return (
-        <header className="header">
-            <div className="header__logo">
+        <header styleName="header">
+            <div styleName="header__logo">
                 <a href="#">WordsGame</a>
             </div>
-            <ul className="header__nav">
+            <ul styleName="header__nav">
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -22,4 +23,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default CSSModules(Header, style);

@@ -15,4 +15,12 @@
     .englishTranslation {
         @extend %cell-place;
     }
+
+    .englishTranscription {
+        color: black;
+    }
+
+    .color {
+        color: red;
+    }
 }

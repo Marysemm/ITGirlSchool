@@ -9,11 +9,6 @@ $mainColor: #f8f8f8;
   text-align: center;
   margin: 20px 1px;
 
-  &.selected {
-    transform: scale(1.1);
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  }
-
   .card__title {
     font: bold 20px Georgia, serif;
     color: $mainColor;
@@ -90,4 +85,9 @@ $mainColor: #f8f8f8;
     padding: 10px 30px;
     height: 15%;
   }
+}
+
+.selected {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }

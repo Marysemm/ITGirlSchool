@@ -1,17 +1,18 @@
 import React from "react";
-import './rates.scss';
+import style from "./style.module.scss";
 
 function Rates(props) {
+    const chosen = props.selected ? 'selected' : '';
     return (
-        <div className={`card ${props.selected}`}>
-            <h2 className={`card__title ${props.color}`}>{props.rateName}</h2>
-            <div className={`card__rate ${props.color}`}>
-                <span className="rateValue">руб </span>
-                <span className="ratePrice">{props.rate}</span>
-                <span className="rateMonth">/мес</span>
+        <div className={`${style.card} ${style[chosen]}`}>
+            <h2 className={`${style.card__title} ${style[props.color]}`}>{props.rateName}</h2>
+            <div className={`${style.card__rate} ${style[props.color]}`}>
+                <span className={style.rateValue}>руб </span>
+                <span className={style.ratePrice}>{props.rate}</span>
+                <span className={style.rateMonth}>/мес</span>
             </div>
-            <p className="card__speed">до {props.condition} Мбит/сек</p>
-            <p className="card__detailes">Объем включенного трафика не ограничен</p>
+            <p className={style.card__speed}>до {props.condition} Мбит/сек</p>
+            <p className={style.card__detailes}>Объем включенного трафика не ограничен</p>
         </div >
     );
 }

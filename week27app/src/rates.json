@@ -16,7 +16,7 @@
         "rate": "550",
         "condition": "100",
         "color": "red",
-        "selected": "selected"
+        "selected": "true"
     },
     {
         "rateName": "Безлимитный 1000",
