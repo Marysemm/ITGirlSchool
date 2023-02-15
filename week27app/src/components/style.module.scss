@@ -1,13 +1,22 @@
 $mainColor: #f8f8f8;
 
+@mixin btn {
+  margin-top: 50px;
+  width: 100px;
+  height: 40px;
+  color: $mainColor;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 * {
   margin: 0;
 }
 
 .card {
-  height: 100%;
+  height: 300px;
   text-align: center;
-  margin: 20px 1px;
+  margin: 1px;
 
   .card__title {
     font: bold 20px Georgia, serif;
@@ -83,11 +92,21 @@ $mainColor: #f8f8f8;
     text-align: center;
     background-color: #f0f0f0;
     padding: 10px 30px;
-    height: 15%;
+    height: 40px;
   }
 }
 
 .selected {
   transform: scale(1.1);
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn_not-selected {
+  @include btn;
+  background-color: #488b53
+}
+
+.btn_selected {
+  @include btn;
+  background-color: #d56f4a;
 }
