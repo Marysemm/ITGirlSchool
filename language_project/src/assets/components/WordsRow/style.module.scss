@@ -1,0 +1,51 @@
+@import '../../styles/options.scss';
+
+@mixin btn {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    font: $buttonFont;
+    color: $textColor;
+    cursor: pointer;
+    margin: 5px;
+}
+
+table {
+    border: $boldBorder;
+    width: 1000px;
+    height: 200px;
+
+    th {
+        border-bottom: $regularBorder;
+        background-color: $mainColor;
+    }
+
+    td {
+        width: 200px;
+        text-align: center;
+        background-color: #ecececcb;
+
+        input {
+            text-align: center;
+        }
+    }
+}
+
+
+.button__edit {
+    @include btn;
+    background-color: #7dee97cb;
+
+    &:hover {
+        background-color: #37c959cb;
+    }
+}
+
+.button__delete {
+    @include btn;
+    background-color: #dc64d8c7;
+
+    &:hover {
+        background-color: #c42ebfc7;
+    }
+}

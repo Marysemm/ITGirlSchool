@@ -1,9 +1,10 @@
-import React from "react";
+
 import CSSModules from "react-css-modules";
+import WordsRow from "../WordsRow/WordsRow";
 import data from '../../../words.json';
 import style from "./style.module.scss";
 
-function Words(props) {
+function Words() {
     return (
         <div styleName="word__cards">
             <table>
@@ -17,24 +18,17 @@ function Words(props) {
                 </thead>
                 {data.map((words) => {
                     return (
-                        <tbody key={words.id}>
-                            <tr>
-                                <td>{words.english}</td>
-                                <td>{words.transcription}</td>
-                                <td>{words.russian}</td>
-                                <td>
-                                    <button styleName="button__edit">Edit</button>
-                                    <button styleName="button__delete">Delete</button>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <WordsRow
+                            key={words.id}
+                            english={words.english}
+                            transcription={words.transcription}
+                            russian={words.russian}
+                        />
                     )
                 })}
             </table>
         </div>
     )
 }
-
-
 
 export default CSSModules(Words, style);
