@@ -49,3 +49,12 @@ table {
         background-color: #c42ebfc7;
     }
 }
+
+.button__cancel {
+    @include btn;
+    background-color: #5c90f0c7;
+
+    &:hover {
+        background-color: #3772bac7;
+    }
+}

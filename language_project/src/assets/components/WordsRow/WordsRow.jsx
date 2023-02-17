@@ -56,7 +56,7 @@ function WordsRow(props) {
                                         readOnly="readOnly" />
                                 </td>
                                 <td>
-                                    <button styleName="button__edit" onClick={handleEdit}>Edit</button>
+                                    <button styleName="button__cancel" onClick={handleEdit}>Cancel</button>
                                     <button styleName="button__delete">Delete</button>
                                 </td>
                             </tr>
