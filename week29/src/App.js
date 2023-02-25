@@ -5,14 +5,17 @@ function App() {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setCount(count => count + 1);
+    setCount(currentCount => currentCount + 1);
   }
 
   useEffect(() => console.log(count),
     [count]);
 
   return (
-    <button onClick={handleClick}>{count}</button>
+    <div>
+      <button onClick={handleClick}>Нажми меня</button>
+      <p>Кнопку нажали {count} раз</p>
+    </div>
   )
 
 }
