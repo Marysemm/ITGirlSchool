@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import CSSModules from 'react-css-modules';
 import Word from '../Word/Word';
 import data from '../../../words.json';
 import style from "./style.module.scss";
 
 function WordCollection() {
+    const [count, setCount] = useState(0)
+
+    function handlePrev() {
+        setCount((count - 1) % data.length)
+    }
+
+    function handleNext() {
+        setCount((count + 1) % data.length)
+    }
+
     return (
-        <div styleName="word__card">
-            {
-                data.map((words) =>
-                    <Word
-                        key={words.id}
-                        english={words.english}
-                        transcription={words.transcription}
-                        russian={words.russian}
-                    />
-                )
-            }
+        <div styleName="card__wrapper" key={count}>
+            <button styleName="card__btn" onClick={handlePrev}>Previous word</button>
+            <div styleName="word__card">
+                <Word
+                    word={data[count]}
+                />
+            </div>
+            <button styleName="card__btn" onClick={handleNext}>Next word</button>
         </div>
     )
 }
