@@ -1,0 +1,57 @@
+@import '../../styles/options.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.795) 0 100%), url(../../img/background_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.header {
+    height: 70px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: $mainColor;
+
+    .header__logo {
+        font: $logoFont;
+
+        a {
+            text-decoration: none;
+            color: $textColor;
+        }
+    }
+
+    .header__nav {
+        font: $mainFont;
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+
+        li {
+            margin: 15px;
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $textColor;
+        }
+
+        a:hover {
+            text-shadow: #f99169 0 0 10px;
+        }
+
+        a.active {
+            color: red;
+        }
+    }
+}

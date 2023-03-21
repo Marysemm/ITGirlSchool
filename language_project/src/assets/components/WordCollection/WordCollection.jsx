@@ -8,7 +8,13 @@ function WordCollection() {
     const [count, setCount] = useState(0)
 
     function handlePrev() {
-        setCount((count - 1) % data.length)
+        {
+            if (count > 0) {
+                setCount((count - 1) % data.length)
+            } else {
+                setCount(data.length - 1)
+            }
+        }
     }
 
     function handleNext() {
