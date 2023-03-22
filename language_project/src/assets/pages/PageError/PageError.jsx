@@ -3,9 +3,11 @@ import style from "./style.module.scss";
 
 function PageError() {
     return (
-        <div styleName='error_wrapper'>
-            <h2>Ошибка 404</h2>
-            <p>Такой страницы тут точно нет</p>
+        <div styleName='error__wrapper'>
+            <div styleName="error__content">
+                <h2>Ошибка 404</h2>
+                <p>Такой страницы тут точно нет</p>
+            </div>
         </div>
     )
 }
