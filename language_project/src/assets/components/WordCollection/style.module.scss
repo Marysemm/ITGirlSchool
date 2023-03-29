@@ -1,12 +1,20 @@
 @import '../../styles/options.scss';
 
+.card__count {
+    padding-top: 150px;
+    text-align: center;
+}
+
 .card__wrapper {
+    height: 100vh;
     display: grid;
     justify-items: center;
     align-items: center;
+    align-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 150px 100px;
+    padding: 50px 100px;
+    overflow: hidden;
 
     .word__card {
         opacity: 0;

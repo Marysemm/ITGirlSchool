@@ -6,6 +6,7 @@ import style from "./style.module.scss";
 
 function WordCollection() {
     const [count, setCount] = useState(0)
+    const [countWord, setCountWord] = useState(0)
 
     function handlePrev() {
         {
@@ -21,16 +22,26 @@ function WordCollection() {
         setCount((count + 1) % data.length)
     }
 
+    function handleChange() {
+        setCountWord((countWord) => countWord + 1);
+    }
+
     return (
-        <div styleName="card__wrapper" key={count}>
-            <button styleName="card__btn" onClick={handlePrev}>Previous word</button>
-            <div styleName="word__card">
-                <Word
-                    word={data[count]}
-                />
+        <>
+            console.log(count);
+            <p styleName="card__count">Проверено {countWord} слов</p>
+            <div styleName="card__wrapper" key={count}>
+                <button styleName="card__btn" onClick={handlePrev}>Previous word</button>
+                <div styleName="word__card">
+                    <Word
+                        word={data[count]}
+                        count={countWord}
+                        handleChange={handleChange}
+                    />
+                </div>
+                <button styleName="card__btn" onClick={handleNext}>Next word</button>
             </div>
-            <button styleName="card__btn" onClick={handleNext}>Next word</button>
-        </div>
+        </>
     )
 }
 

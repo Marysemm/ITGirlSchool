@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import CSSModules from 'react-css-modules';
 import style from "./style.module.scss";
 
-function Word({ word }, count) {
+function Word({ word, count, handleChange }) {
     const { english, transcription, russian } = word;
 
     const [checked, setCheked] = useState(false);
 
-    const handleChange = () => {
+    const handleClick = () => {
         setCheked(!checked);
+        handleChange();
     }
 
-    console.log(word);
     return (
         <div styleName="card__wrapper">
             <h3 styleName="word">{english}</h3>
@@ -21,7 +21,7 @@ function Word({ word }, count) {
                     <div styleName="word__translated">{russian}</div>
                 </div>
             ) : (
-                <button styleName="button__check" onClick={handleChange}>Проверить</button>
+                <button styleName="button__check" onClick={handleClick}>Проверить</button>
             )}
         </div>
     )

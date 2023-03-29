@@ -22,6 +22,7 @@
     align-items: center;
     padding: 15px;
     background-color: $mainColor;
+    z-index: 10;
 
     .header__logo {
         font: $logoFont;
