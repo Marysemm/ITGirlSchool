@@ -1,15 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import CSSModules from 'react-css-modules';
 import style from "./style.module.scss";
 
-function Word({ word, count, handleChange }) {
+function Word({ word, getCountWord }) {
     const { english, transcription, russian } = word;
 
     const [checked, setCheked] = useState(false);
 
+
     const handleClick = () => {
         setCheked(!checked);
-        handleChange();
+        getCountWord();
     }
 
     return (

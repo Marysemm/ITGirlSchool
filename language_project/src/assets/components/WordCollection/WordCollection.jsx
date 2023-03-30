@@ -22,21 +22,19 @@ function WordCollection() {
         setCount((count + 1) % data.length)
     }
 
-    function handleChange() {
-        setCountWord((countWord) => countWord + 1);
+    function getCountWord() {
+        setCountWord(countWord + 1);
     }
 
     return (
         <>
-            console.log(count);
             <p styleName="card__count">Проверено {countWord} слов</p>
             <div styleName="card__wrapper" key={count}>
                 <button styleName="card__btn" onClick={handlePrev}>Previous word</button>
                 <div styleName="word__card">
                     <Word
                         word={data[count]}
-                        count={countWord}
-                        handleChange={handleChange}
+                        getCountWord={getCountWord}
                     />
                 </div>
                 <button styleName="card__btn" onClick={handleNext}>Next word</button>
