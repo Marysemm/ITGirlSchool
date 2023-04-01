@@ -34,6 +34,7 @@ function WordCollection() {
                 <div styleName="word__card">
                     <Word
                         word={data[count]}
+                        count={countWord}
                         getCountWord={getCountWord}
                     />
                 </div>
