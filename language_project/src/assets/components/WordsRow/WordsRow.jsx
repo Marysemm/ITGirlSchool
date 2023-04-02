@@ -4,15 +4,19 @@ import style from "./style.module.scss";
 
 function WordsRow(props) {
     const [editForm, setEditForm] = useState(true)
-    const defaultRow = {
+    const [defaultRow, editDefaultRow] = useState({
         english: props.english,
         transcription: props.transcription,
         russian: props.russian,
         id: props.id,
-    }
+    })
 
     const handleEdit = () => {
         setEditForm(!editForm);
+    }
+
+    const handleChange = (e) => {
+        editDefaultRow({ ...defaultRow, [e.target.name]: e.target.value.toLowerCase() })
     }
 
     return (
@@ -36,24 +40,24 @@ function WordsRow(props) {
                             <tr>
                                 <td>
                                     <input type="text"
-                                        name="englishWord"
+                                        name="english"
                                         required="required"
                                         value={defaultRow.english}
-                                        readOnly="readOnly" />
+                                        onChange={handleChange} />
                                 </td>
                                 <td>
                                     <input type="text"
-                                        name="transcriptionWord"
+                                        name="transcription"
                                         required="required"
                                         value={defaultRow.transcription}
-                                        readOnly="readOnly" />
+                                        onChange={handleChange} />
                                 </td>
                                 <td>
                                     <input type="text"
-                                        name="russianWord"
+                                        name="russian"
                                         required="required"
                                         value={defaultRow.russian}
-                                        readOnly="readOnly" />
+                                        onChange={handleChange} />
                                 </td>
                                 <td>
                                     <button styleName="button__cancel" onClick={handleEdit}>Cancel</button>
