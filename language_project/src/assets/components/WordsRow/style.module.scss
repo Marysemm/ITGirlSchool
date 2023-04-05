@@ -28,6 +28,14 @@ table {
         input {
             text-align: center;
         }
+
+        .input__error {
+            border: 2px solid red;
+        }
+
+        .input__edit {
+            border-color: 2px solid blue;
+        }
     }
 }
 
@@ -57,4 +65,8 @@ table {
     &:hover {
         background-color: #3772bac7;
     }
+}
+
+.button__disabled {
+    color: grey;
 }
