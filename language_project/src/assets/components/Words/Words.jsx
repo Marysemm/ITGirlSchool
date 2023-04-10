@@ -1,10 +1,13 @@
 
 import CSSModules from "react-css-modules";
 import WordsRow from "../WordsRow/WordsRow";
-import data from '../../../words.json';
 import style from "./style.module.scss";
+import { globalContext } from "../../Context/MyContext";
+import { useContext } from "react";
 
 function Words() {
+    const { data, setData } = useContext(globalContext)
+
     return (
         <div styleName="word__cards">
             <table>

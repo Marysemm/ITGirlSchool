@@ -1,15 +1,11 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState, useContext } from "react";
 import CSSModules from "react-css-modules";
 import style from "./style.module.scss";
 
 function WordsRow(props) {
+
     const [editForm, setEditForm] = useState(true)
-    const [defaultRow, editDefaultRow] = useState({
-        english: props.english,
-        transcription: props.transcription,
-        russian: props.russian,
-        id: props.id,
-    })
+    const [defaultRow, editDefaultRow] = useState(props)
     const [errorEnglish, setErrorEnglish] = useState(false);
     const [errorTranscription, setErrorTranscription] = useState(false);
     const [errorRussian, setErrorRussian] = useState(false);

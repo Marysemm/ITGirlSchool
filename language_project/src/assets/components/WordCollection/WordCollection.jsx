@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { globalContext } from "../../Context/MyContext";
 import CSSModules from 'react-css-modules';
 import Word from '../Word/Word';
-import data from '../../../words.json';
 import style from "./style.module.scss";
 
 function WordCollection() {
+    const { data, setData } = useContext(globalContext)
+
     const [count, setCount] = useState(0)
     const [countWord, setCountWord] = useState(0)
 
