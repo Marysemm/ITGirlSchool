@@ -4,10 +4,12 @@ import style from "./style.module.scss";
 
 function Word({ word, getCountWord }) {
     const { english, transcription, russian } = word;
-
     const [checked, setCheked] = useState(false);
 
+    //const isTranslated = translatedWords.includes(word);
+
     const ref = useRef();
+
     useEffect(() => {
         ref.current.focus();
     }, []);
@@ -17,11 +19,19 @@ function Word({ word, getCountWord }) {
         getCountWord();
     }
 
+    //const handleTranslateButtonClick = () => {
+    //    if (!isTranslated) {
+    //        onTranslate(word);
+    //    }
+    //    setCheked(!checked);
+    //    getCountWord();
+    //};
+
     return (
         <div styleName="card__wrapper">
             <h3 styleName="word">{english}</h3>
             <p styleName="word__transcription">{transcription}</p>
-            {checked ? (
+            {isTranslated ? (
                 <div styleName="word__checked">
                     <div styleName="word__translated">{russian}</div>
                 </div>
