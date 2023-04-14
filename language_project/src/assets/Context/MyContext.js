@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import Loader from "../components/Loader/Loader";
+import Error from "../components/Error/Error";
 
 export const globalContext = createContext()
 
@@ -70,7 +71,7 @@ export function ContextProvider({ children }) {
     }
 
     if (error) {
-        return console.log("Ошибка");
+        return <Error />;
     }
 
     return (
