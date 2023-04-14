@@ -5,23 +5,22 @@ import Word from '../Word/Word';
 import style from "./style.module.scss";
 
 function WordCollection() {
-    const { data, setData } = useContext(globalContext)
-
+    const { words } = useContext(globalContext)
     const [count, setCount] = useState(0)
     const [countWord, setCountWord] = useState(0)
 
     function handlePrev() {
         {
             if (count > 0) {
-                setCount((count - 1) % data.length)
+                setCount((count - 1) % words.length)
             } else {
-                setCount(data.length - 1)
+                setCount(words.length - 1)
             }
         }
     }
 
     function handleNext() {
-        setCount((count + 1) % data.length)
+        setCount((count + 1) % words.length)
     }
 
     function getCountWord() {
@@ -35,7 +34,7 @@ function WordCollection() {
                 <button styleName="card__btn" onClick={handlePrev}>Previous word</button>
                 <div styleName="word__card">
                     <Word
-                        word={data[count]}
+                        word={words[count]}
                         count={countWord}
                         getCountWord={getCountWord}
                     />

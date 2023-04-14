@@ -67,6 +67,11 @@ table {
     }
 }
 
+.button__add {
+    @include btn;
+    background-color: #5df255;
+}
+
 .button__disabled {
     color: grey;
 }
