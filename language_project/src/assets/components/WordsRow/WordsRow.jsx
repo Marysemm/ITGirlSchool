@@ -4,7 +4,7 @@ import style from "./style.module.scss";
 
 function WordsRow(props) {
     const [editForm, setEditForm] = useState(true)
-    const [defaultRow, editDefaultRow] = useState(props)
+    const [defaultRow, setDefaultRow] = useState(0)
     const [errorEnglish, setErrorEnglish] = useState(false);
     const [errorTranscription, setErrorTranscription] = useState(false);
     const [errorRussian, setErrorRussian] = useState(false);
@@ -17,6 +17,10 @@ function WordsRow(props) {
             setFormValid(true)
         }
     }, [errorEnglish, errorTranscription, errorRussian])
+
+    useEffect(() => {
+        setDefaultRow(props)
+    }, [])
 
     const handleEdit = () => {
         setEditForm(!editForm);
@@ -40,7 +44,7 @@ function WordsRow(props) {
     }
 
     const handleChange = (e) => {
-        editDefaultRow({ ...defaultRow, [e.target.name]: e.target.value.toLowerCase() })
+        setDefaultRow({ ...defaultRow, [e.target.name]: e.target.value.toLowerCase() })
 
         if (e.target.value.match(/[0-9]/)) {
             alert("Пожалуйста, вводите только буквы")
