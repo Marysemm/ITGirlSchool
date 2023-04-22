@@ -8,12 +8,6 @@ function WordCollection() {
     const [count, setCount] = useState(0)
     const [countWord, setCountWord] = useState(0)
 
-    //    const [translatedWords, setTranslatedWords] = useState([]);
-
-    //    const handleTranslate = (word) => {
-    //       setTranslatedWords([...translatedWords, word]);
-    //    };
-
     function handlePrev() {
         {
             if (count > 0) {
@@ -42,8 +36,6 @@ function WordCollection() {
                         word={data[count]}
                         count={countWord}
                         getCountWord={getCountWord}
-                    //translatedWords={translatedWords}
-                    //onTranslate={handleTranslate}
                     />
                 </div>
                 <button styleName="card__btn" onClick={handleNext}>Next word</button>

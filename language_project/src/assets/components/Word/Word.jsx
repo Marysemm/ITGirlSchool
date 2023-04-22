@@ -32,4 +32,5 @@ function Word({ word, getCountWord }) {
     )
 }
 
+
 export default CSSModules(Word, style);
