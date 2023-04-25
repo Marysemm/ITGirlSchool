@@ -1,10 +1,22 @@
 
 import CSSModules from "react-css-modules";
 import WordsRow from "../WordsRow/WordsRow";
-import data from '../../../words.json';
 import style from "./style.module.scss";
+import { globalContext } from "../../Context/MyContext";
+import { useContext, useEffect, useState } from "react";
 
 function Words() {
+    const { words, deleteWords } = useContext(globalContext)
+    const [wordList, setWordList] = useState(words)
+
+    useEffect(() => {
+        setWordList(words)
+    }, [words]);
+
+    const handleDeleteWord = (id) => {
+        deleteWords(id);
+    };
+
     return (
         <div styleName="word__cards">
             <table>
@@ -16,13 +28,13 @@ function Words() {
                         <th>Actions</th>
                     </tr>
                 </thead>
-                {data.map((words) => {
+                {wordList.map((word, index) => {
                     return (
                         <WordsRow
-                            key={words.id}
-                            english={words.english}
-                            transcription={words.transcription}
-                            russian={words.russian}
+                            index={index}
+                            key={word.id}
+                            {...word}
+                            handleDeleteWord={handleDeleteWord}
                         />
                     )
                 })}

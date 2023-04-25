@@ -1,4 +1,5 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState, useContext } from "react";
+import { globalContext } from "../../Context/MyContext";
 import CSSModules from "react-css-modules";
 import style from "./style.module.scss";
 
@@ -9,6 +10,7 @@ function WordsRow(props) {
     const [errorTranscription, setErrorTranscription] = useState(false);
     const [errorRussian, setErrorRussian] = useState(false);
     const [formValid, setFormValid] = useState(false);
+    const { addWords, editWords } = useContext(globalContext);
 
     useEffect(() => {
         if (errorEnglish || errorTranscription || errorRussian) {
@@ -36,12 +38,16 @@ function WordsRow(props) {
         if (defaultRow.russian === "") {
             setErrorRussian(true);
         }
-        if (defaultRow.english !== "" && defaultRow.transcription !== "" && defaultRow.russian !== "") {
-            setEditForm(!editForm);
-            console.log(props);
-        }
-
     }
+
+    const handleChangeSave = (e) => {
+        e.preventDefault();
+        checkValidation();
+        if (defaultRow.english !== "" && defaultRow.transcription !== "" && defaultRow.russian !== "" && defaultRow.tags !== "") {
+            setEditForm(!editForm);
+        }
+        editWords(defaultRow);
+    };
 
     const handleChange = (e) => {
         setDefaultRow({ ...defaultRow, [e.target.name]: e.target.value.toLowerCase() })
@@ -59,7 +65,20 @@ function WordsRow(props) {
         if (defaultRow.russian !== "") {
             setErrorRussian(false);
         }
+        checkValidation();
     }
+
+    const handleAddWord = (word) => {
+        if (
+            defaultRow.english !== "" && defaultRow.transcription !== "" && defaultRow.russian !== "") {
+            addWords(defaultRow);
+            setDefaultRow({ ...defaultRow, word });
+        }
+    };
+
+    const onDelete = () => {
+        props.handleDeleteWord(props.id);
+    };
 
     return (
         <Fragment>
@@ -119,10 +138,14 @@ function WordsRow(props) {
                             )
                                 :
                                 (
-                                    <button styleName="button__cancel" disabled={!formValid} onClick={checkValidation}>Save</button>
+                                    <div>
+                                        <button styleName="button__add" onClick={handleAddWord}>Add</button>
+                                        <button styleName="button__edit" onClick={handleEdit}>Cancel</button>
+                                        <button styleName="button__cancel" disabled={!formValid} onClick={handleChangeSave}>Save</button>
+                                    </div>
                                 )
                         }
-                        <button styleName="button__delete">Delete</button>
+                        <button styleName="button__delete" onClick={onDelete}>Delete</button>
                     </td>
                 </tr>
             </tbody>
