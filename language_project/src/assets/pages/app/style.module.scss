@@ -1,10 +1,5 @@
 @import '../../styles/options.scss';
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .App {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.445) 0 100%), url(../../img/background_img.jpg);
     background-size: cover;
@@ -42,21 +37,27 @@
     .header__nav {
         font: $mainFont;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 300px;
 
         li {
-            margin: 15px;
+            padding: 10px;
             list-style-type: none;
+            border: 1mm ridge rgba(209, 236, 255, 0.896);
+            border-radius: 10px;
+            background-size: 300% 100%;
+            background-color: #bcdef7;
+
+            &:hover {
+                @include btn-hover;
+                background-image: linear-gradient(to right, #9dafff, #64b6ec, #4393ef, #916af5);
+                box-shadow: 0 4px 15px 0 rgba(104, 143, 252, 0.75);
+            }
         }
 
         a {
             text-decoration: none;
             color: $textColor;
-        }
-
-        a:hover {
-            text-shadow: #f99169 0 0 10px;
         }
 
         a.active {
@@ -98,19 +99,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-size: 300% 100%;
             background-color: #ff9a44;
+            background-size: 300% 100%;
 
             .greeting__btn-img {
                 width: 30px;
             }
 
             &:hover {
-                cursor: pointer;
+                @include btn-hover;
                 background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
                 box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
-                background-position: 100% 0;
-                transition: all .8s ease-in-out;
             }
         }
     }

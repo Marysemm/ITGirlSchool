@@ -19,7 +19,9 @@ function App() {
         <Router>
           <header styleName="header">
             <div styleName="header__logo">
-              <NavLink to="/"><img src={IconTeacup}></img></NavLink>
+              <NavLink to="/">
+                <img src={IconTeacup}></img>
+              </NavLink>
             </div>
             <ul styleName="header__nav">
               <li>

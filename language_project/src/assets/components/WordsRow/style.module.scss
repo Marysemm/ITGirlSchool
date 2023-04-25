@@ -70,6 +70,10 @@ table {
 .button__add {
     @include btn;
     background-color: #5df255;
+
+    &:hover {
+        background-color: #e4ff6b;
+    }
 }
 
 .button__disabled {
