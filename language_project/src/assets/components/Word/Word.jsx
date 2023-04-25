@@ -10,13 +10,13 @@ function Word({ word, getCountWord, handleTranslateWord, translatedWordsId }) {
 
     useEffect(() => {
         ref.current.focus();
+        if (translatedWordsId.includes(id)) {
+            setCheked(!checked)
+        }
     }, []);
 
     const handleClick = () => {
         handleTranslateWord(id);
-        if (translatedWordsId === id) {
-            setCheked(checked);
-        }
         setCheked(!checked)
         getCountWord();
     }
