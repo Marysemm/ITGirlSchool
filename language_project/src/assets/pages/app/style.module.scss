@@ -6,7 +6,7 @@
 }
 
 .App {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.795) 0 100%), url(../../img/background_img.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.445) 0 100%), url(../../img/background_img.jpg);
     background-size: cover;
     background-repeat: repeat;
     height: 100%;
@@ -23,6 +23,7 @@
     padding: 15px;
     background-color: $mainColor;
     z-index: 10;
+    border-bottom: 1mm ridge rgba(209, 236, 255, 0.896);
 
     .header__logo {
         font: $logoFont;

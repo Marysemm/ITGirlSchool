@@ -12,6 +12,7 @@ import IconTeacup from "./../../img/tea_cup_icon.png"
 
 function App() {
   const [greetings, setGreetings] = useState(false);
+
   return (
     <div styleName="App">
       {greetings ? (

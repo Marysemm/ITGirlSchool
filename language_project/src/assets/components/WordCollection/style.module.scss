@@ -3,6 +3,7 @@
 .card__count {
     padding-top: 150px;
     text-align: center;
+    font: $mainFont;
 }
 
 .card__wrapper {
@@ -42,9 +43,10 @@
     @include btn;
     width: 150px;
     height: 50px;
+    background-color: $mainColor;
 
     &:hover {
-        background-color: #b9b5b5;
+        background-color: #bcdef9;
         transition: all 0.3s;
     }
 }
