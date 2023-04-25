@@ -2,18 +2,22 @@ import React, { useState, useRef, useEffect } from "react";
 import CSSModules from 'react-css-modules';
 import style from "./style.module.scss";
 
-function Word({ word, getCountWord }) {
-    const { english, transcription, russian } = word;
-
+function Word({ word, getCountWord, handleTranslateWord, translatedWordsId }) {
+    const { id, english, transcription, russian } = word;
     const [checked, setCheked] = useState(false);
 
     const ref = useRef();
+
     useEffect(() => {
         ref.current.focus();
+        if (translatedWordsId.includes(id)) {
+            setCheked(!checked)
+        }
     }, []);
 
     const handleClick = () => {
-        setCheked(!checked);
+        handleTranslateWord(id);
+        setCheked(!checked)
         getCountWord();
     }
 
@@ -31,5 +35,6 @@ function Word({ word, getCountWord }) {
         </div>
     )
 }
+
 
 export default CSSModules(Word, style);

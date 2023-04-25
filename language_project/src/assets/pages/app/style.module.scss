@@ -6,7 +6,7 @@
 }
 
 .App {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.795) 0 100%), url(../../img/background_img.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.445) 0 100%), url(../../img/background_img.jpg);
     background-size: cover;
     background-repeat: repeat;
     height: 100%;
@@ -23,6 +23,7 @@
     padding: 15px;
     background-color: $mainColor;
     z-index: 10;
+    border-bottom: 1mm ridge rgba(209, 236, 255, 0.896);
 
     .header__logo {
         font: $logoFont;
@@ -30,6 +31,11 @@
         a {
             text-decoration: none;
             color: $textColor;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
         }
     }
 
@@ -55,6 +61,57 @@
 
         a.active {
             color: red;
+        }
+    }
+}
+
+.greeting__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    .greeting__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .greeting__title {
+            color: $textColor;
+            font: $logoFont;
+            margin: 20px;
+        }
+
+        .greeting__text {
+            width: 300px;
+            text-align: center;
+            color: $textColor;
+            font: $mainFont;
+        }
+
+        .greeting__btn {
+            @include btn;
+            width: 120px;
+            height: 40px;
+            margin: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: 300% 100%;
+            background-color: #ff9a44;
+
+            .greeting__btn-img {
+                width: 30px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+                box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+                background-position: 100% 0;
+                transition: all .8s ease-in-out;
+            }
         }
     }
 }
