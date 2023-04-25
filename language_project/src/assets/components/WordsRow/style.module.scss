@@ -11,7 +11,8 @@
 }
 
 table {
-    border: $boldBorder;
+    border: 1mm ridge rgba(209, 236, 255, 0.896);
+    border-radius: 10px;
     width: 1000px;
     height: 200px;
 
@@ -64,15 +65,6 @@ table {
 
     &:hover {
         background-color: #3772bac7;
-    }
-}
-
-.button__add {
-    @include btn;
-    background-color: #5df255;
-
-    &:hover {
-        background-color: #e4ff6b;
     }
 }
 

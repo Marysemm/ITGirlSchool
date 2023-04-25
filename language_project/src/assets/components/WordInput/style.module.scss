@@ -1,0 +1,30 @@
+@import '../../styles/options.scss';
+
+.form__word {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    margin: 50px;
+    padding: 10px 0;
+    border: 1mm ridge rgba(209, 236, 255, 0.896);
+    border-radius: 10px;
+}
+
+
+.button__add {
+    @include btn;
+    background-color: #5df255;
+
+    &:hover {
+        background-color: #e4ff6b;
+    }
+}
+
+.button__edit {
+    @include btn;
+    background-color: #7dee97cb;
+
+    &:hover {
+        background-color: #37c959cb;
+    }
+}

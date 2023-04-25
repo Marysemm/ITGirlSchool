@@ -10,7 +10,7 @@ function WordsRow(props) {
     const [errorTranscription, setErrorTranscription] = useState(false);
     const [errorRussian, setErrorRussian] = useState(false);
     const [formValid, setFormValid] = useState(false);
-    const { addWords, editWords } = useContext(globalContext);
+    const { editWords } = useContext(globalContext);
 
     useEffect(() => {
         if (errorEnglish || errorTranscription || errorRussian) {
@@ -67,14 +67,6 @@ function WordsRow(props) {
         }
         checkValidation();
     }
-
-    const handleAddWord = (word) => {
-        if (
-            defaultRow.english !== "" && defaultRow.transcription !== "" && defaultRow.russian !== "") {
-            addWords(defaultRow);
-            setDefaultRow({ ...defaultRow, word });
-        }
-    };
 
     const onDelete = () => {
         props.handleDeleteWord(props.id);
@@ -139,7 +131,6 @@ function WordsRow(props) {
                                 :
                                 (
                                     <div>
-                                        <button styleName="button__add" onClick={handleAddWord}>Add</button>
                                         <button styleName="button__edit" onClick={handleEdit}>Cancel</button>
                                         <button styleName="button__cancel" disabled={!formValid} onClick={handleChangeSave}>Save</button>
                                     </div>
