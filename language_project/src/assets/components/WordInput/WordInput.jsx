@@ -5,17 +5,18 @@ import style from "./style.module.scss";
 
 function WordInput() {
     const { addWords } = useContext(globalContext);
-    const [state, setState] = useState();
+    const [state, setState] = useState({});
+    const initialState = {
+        english: "",
+        transcription: "",
+        russian: "",
+    };
 
     const handleChangeInput = (event) => {
         setState({
             ...state,
             [event.target.name]: event.target.value,
         });
-
-        if (event.target.value === "") {
-            alert("Пожалуйста, заполните все поля");
-        }
     };
 
     const onSubmit = (event) => {
@@ -27,27 +28,40 @@ function WordInput() {
             state.tags !== ""
         ) {
             addWords(state);
-            setState();
+            setState(initialState);
+        } else {
+            alert("Пожалуйста, заполните все поля");
         }
     };
 
     return (
         <form onSubmit={onSubmit} styleName="form__word">
-            <input type="text"
-                placeholder="English"
-                name="english"
-                onChange={handleChangeInput} />
-            <input type="text"
-                placeholder="Transcription"
-                name="transcription"
-                onChange={handleChangeInput} />
-            <input type="text"
-                placeholder="Russian"
-                name="russian"
-                onChange={handleChangeInput} />
-            <div>
+            <div styleName="input__field">
+                <label htmlFor="english">English</label>
+                <input type="text"
+                    placeholder="Start typing..."
+                    name="english"
+                    value={state.english || ""}
+                    onChange={handleChangeInput} />
+            </div>
+            <div styleName="input__field">
+                <label htmlFor="transcription">Transcription</label>
+                <input type="text"
+                    placeholder="Start typing..."
+                    name="transcription"
+                    value={state.transcription || ""}
+                    onChange={handleChangeInput} />
+            </div>
+            <div styleName="input__field">
+                <label htmlFor="russian">Translation</label>
+                <input type="text"
+                    placeholder="Start typing..."
+                    name="russian"
+                    value={state.russian || ""}
+                    onChange={handleChangeInput} />
+            </div>
+            <div styleName="button__wrapper">
                 <button styleName="button__add" onClick={onSubmit}>Add</button>
-                {/* <button styleName="button__edit" onClick={clearInputs}>Clear</button> */}
             </div>
         </form>
     )
