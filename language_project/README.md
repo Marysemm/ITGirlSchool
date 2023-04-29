@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Language-App
+React application for learning english words.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>About The Project</h2>
 
-## Available Scripts
+<h3>Learn English words easily with my App ✨</h3>
+<ul>
+<li>You can add and change new words</li>
+<li>You can delete already learned words</li>
+<li>On the Game page you can check yourself - the counter will show how many words you still have to learn</li>
+</ul>
 
-In the project directory, you can run:
+<h3>Project GIFs</h3>
 
-### `npm start`
+![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjJmOTc0NmYyZjU3OWQ2NDdmYjM1YjgwNWViYzQyMDA2YWQyOGQyZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/pG3sQO1O95E3AfjYf4/giphy.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI0YTFiYmQ0MzRmNjI1ODVjYWQ2NTk2ZDIwMmMxNDkyMmYzYzBjYyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/uReFwKFqzDTOOQRl2U/giphy.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODhmYTg2ZWNjYzVmN2Y2MGIzNTQ2MWQ0MzJiYzFmOTlhMDk2OGU5ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/BnUdzEfqTHD8K84z1R/giphy.gif)
 
-### `npm test`
+![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGRiYzZlMDJmYThiOTdlNDMxNjNjZWMyNTY4ZmFhZTRmYTBkYTQxMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Crt4aYYQvVoSoHPVHZ/giphy.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup:
+1. Clone the repository and install the dependencies
+```bash
+npm install
+```
+2. Start the frontend application locally
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies:
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
+<code><img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
+<code><img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Result:
