@@ -16,6 +16,8 @@ React application for learning english words.
 
 ![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI0YTFiYmQ0MzRmNjI1ODVjYWQ2NTk2ZDIwMmMxNDkyMmYzYzBjYyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/uReFwKFqzDTOOQRl2U/giphy.gif)
 
+![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODhmYTg2ZWNjYzVmN2Y2MGIzNTQ2MWQ0MzJiYzFmOTlhMDk2OGU5ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/BnUdzEfqTHD8K84z1R/giphy.gif)
+
 ![hippo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGRiYzZlMDJmYThiOTdlNDMxNjNjZWMyNTY4ZmFhZTRmYTBkYTQxMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Crt4aYYQvVoSoHPVHZ/giphy.gif)
 
 
